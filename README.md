@@ -1,6 +1,30 @@
-Voici une documentation complète pour votre projet **PAN-AFRICA VISION 2030**.
+Le projet **PAN-AFRICA VISION 2030** est un portail interactif et prestigieux conçu pour simuler et concevoir des méga-projets de développement à l'échelle du continent africain pour l'horizon 2030. Le projet combine un design "Luxe & Futuriste" avec la puissance de l'IA générative pour offrir une expérience immersive.
 
----
+Voici les détails approfondis du projet et de ses options :
+
+### 1. Les Outils de Vision IA (Options du Portail)
+Le portail propose quatre outils spécialisés utilisant l'IA Mistral pour générer des concepts détaillés :
+
+* **🏙️ Générateur de Cité Futuriste** : Permet de concevoir des villes intelligentes en choisissant la région (ex: Lagos, Nairobi, Dakar), la superficie (de 500 à 50 000 hectares) et le concept directeur (Hub IA, Éco-cité, Zone industrielle).
+* **🔬 Hub Scientifique & Spatial** : Projette des infrastructures de recherche de classe mondiale (IA, Génomique, Agence Spatiale) à l'échelle nationale, régionale ou continentale.
+* **🏛️ Musée & Pôle Culturel** : Crée des concepts d'institutions culturelles (Musée Panafricain, Bibliothèque Universelle) en définissant une direction architecturale (Afro-futuriste, Néo-traditionnel, High-tech).
+* **⚡ Projet Énergie Continent** : Dimensionne des infrastructures énergétiques massives (Solaire au Sahara, Hydrogène vert, Barrages) en ciblant des capacités allant de 500 MW à plus de 100 GW.
+
+### 2. Architecture Technique & Sécurité
+Le projet utilise une structure robuste pour garantir performance et sécurité :
+* **Proxy Sécurisé (`mistral_proxy.php`)** : Ce script agit comme un rempart. Il contient les clés API Mistral côté serveur pour éviter qu'elles ne soient exposées dans le navigateur de l'utilisateur. Il gère également le **Rate Limiting** (limité à 30 requêtes) pour éviter les abus.
+* **Système de Prompting Dynamique** : Chaque option choisie par l'utilisateur est injectée dans un "prompt" sophistiqué qui force l'IA à adopter un rôle précis (urbaniste, ingénieur en chef, directeur artistique) et à structurer sa réponse avec des sections comme la vision, l'impact économique, et le calendrier 2025-2035.
+
+### 3. Design System & Expérience Utilisateur
+L'interface est conçue pour évoquer le pouvoir et l'avenir de l'Afrique :
+* **Identité Visuelle** : Palette de couleurs nommée "Noir Nuit", "Or Africain", "Vert Savane" et "Rouge Latérite".
+* **Interactivité Haute Fidélité** : Utilisation d'un curseur personnalisé qui réagit aux survols, d'un fond animé via Canvas dans la section Hero, et de typographies élégantes (*Cormorant Garamond* pour le prestige et *Syne* pour la modernité).
+* **Responsive Design** : Le portail est entièrement optimisé pour mobile, avec une adaptation des grilles et la désactivation du curseur personnalisé sur les écrans tactiles.
+
+### 4. Fonctionnalités de Contact et Leads
+Au-delà de la simulation IA, le projet intègre un tunnel de conversion :
+* **Gestion des Leads** : Un formulaire de contact permet aux utilisateurs de soumettre des demandes. Les données sont sauvegardées localement et un numéro de référence unique (ex: PAV-K8J2...) est généré pour chaque demande.
+* **Simulation d'Engagement** : Le système simule une attente de 72h pour un retour d'un "associé", renforçant l'aspect exclusif et professionnel de la plateforme.
 
 # 🌍 PAN-AFRICA VISION 2030 — Portail IA
 
