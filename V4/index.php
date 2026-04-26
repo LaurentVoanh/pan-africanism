@@ -1,9 +1,10 @@
 <?php
 /**
- * AFRO ARTIST HUB - Page Principale V4
- * Thème: 2Advanced Studios Light Mode - Afro-Futurisme de Luxe
- * Palette: Blanc Pur · Ivoire · Or Royal · Bronze · Lueurs Dorées
- * Design: HUD, Glassmorphism, Grilles de Précision, Typographie Mixte
+ * AFRO ARTIST HUB - Page Principale V4.5
+ * Thème: Bootstrap Panel Futuriste - Afro-Futurisme High-Tech
+ * Palette: Noir Profond · Or Quantique · Bleu Cyber · Violet Nébuleuse
+ * Design: Panels HUD, Glassmorphism, Grilles Holographiques, Animations Fluides
+ * 40 OUTILS IA COMPLETS - Optimisé PC & Smartphone
  */
 ?>
 <!DOCTYPE html>
@@ -11,71 +12,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AFRO ARTIST HUB | Prends le contrôle de ton art. Nous gérons le reste.</title>
+    <title>AFRO ARTIST HUB | 40 Outils IA pour Artistes & Agents</title>
     <meta name="description" content="Plateforme IA dédiée aux artistes et agents de la musique afro-diasporique. 40 outils professionnels : contrats, création, business, juridique.">
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Rajdhani:wght@300;400;500;600;700&family=Audiowide&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Background Grid Animation -->
+    <div class="bg-animation">
+        <div class="grid-overlay"></div>
+        <div class="scan-line"></div>
+        <div class="floating-particles" id="particles"></div>
+    </div>
+
     <!-- Custom Cursor -->
     <div class="custom-cursor"></div>
     <div class="cursor-dot"></div>
 
-    <!-- Header -->
-    <header>
-        <nav>
-            <div class="logo">AFRO ARTIST HUB</div>
-            <ul class="nav-links">
-                <li><a href="#vision">Vision</a></li>
-                <li><a href="#tools">Outils</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
-        </nav>
-    </header>
-    
-    <!-- Hero Section -->
-    <section class="hero">
-        <canvas id="heroCanvas"></canvas>
-        <div class="hero-content">
-            <span class="hero-tag">PORTAIL INTERNATIONAL</span>
-            <h1>L'Empire de ton Art commence ici.</h1>
-            <p class="hero-subtitle">
-                Ne sois plus seulement un talent, deviens une puissance. AfroArtistHub fusionne l'excellence créative de la diaspora avec l'intelligence artificielle la plus pointue pour briser les plafonds de verre mondiaux.
-            </p>
+    <!-- Navigation Panel -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-panel">
+        <div class="container-fluid px-3 px-lg-5">
+            <a class="navbar-brand brand-logo" href="#">
+                <span class="logo-icon"><i class="bi bi-cpu-fill"></i></span>
+                <span class="logo-text">AFRO<span class="highlight">ARTIST</span>HUB</span>
+            </a>
             
-            <div class="hero-cta">
-                <a href="#tools" class="btn-primary">Découvrir les 40 Outils</a>
-                <a href="#vision" class="btn-secondary">Notre Mission</a>
+            <button class="navbar-toggler futuristic-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="toggler-line"></span>
+                <span class="toggler-line"></span>
+                <span class="toggler-line"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#vision"><i class="bi bi-eye-fill"></i> Vision</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tools"><i class="bi bi-grid-3x3-gap-fill"></i> Outils</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features"><i class="bi bi-stars"></i> Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact"><i class="bi bi-envelope-fill"></i> Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="#tools" class="btn btn-neon">
+                            <i class="bi bi-rocket-takeoff-fill"></i> Démarrer
+                        </a>
+                    </li>
+                </ul>
             </div>
+        </div>
+    </nav>
 
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number">40</span>
-                    <span class="stat-label">Outils IA Spécialisés</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">500+</span>
-                    <span class="stat-label">Artistes Accompagnés</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">4</span>
-                    <span class="stat-label">Secteurs de Puissance</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">24/7</span>
-                    <span class="stat-label">Support IA Disponible</span>
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center">
+        <canvas id="heroCanvas"></canvas>
+        
+        <div class="container position-relative z-index-1">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-10">
+                    <!-- Badge -->
+                    <div class="hero-badge mb-4 animate-fade-in">
+                        <span class="badge-icon"><i class="bi bi-lightning-charge-fill"></i></span>
+                        <span>PORTAIL INTERNATIONAL IA</span>
+                    </div>
+                    
+                    <!-- Main Title -->
+                    <h1 class="hero-title mb-4 animate-slide-up">
+                        L'<span class="gradient-text">Empire</span> de ton Art<br>commence ici.
+                    </h1>
+                    
+                    <!-- Subtitle -->
+                    <p class="hero-subtitle mb-5 animate-slide-up delay-1">
+                        Ne sois plus seulement un talent, deviens une <strong class="highlight-text">puissance</strong>. 
+                        AfroArtistHub fusionne l'excellence créative de la diaspora avec l'intelligence artificielle 
+                        la plus pointue pour briser les plafonds de verre mondiaux.
+                    </p>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="hero-cta mb-5 animate-slide-up delay-2">
+                        <a href="#tools" class="btn btn-primary-glow me-3">
+                            <i class="bi bi-grid-3x3-gap-fill"></i>
+                            Découvrir les 40 Outils
+                        </a>
+                        <a href="#vision" class="btn btn-secondary-outline">
+                            <i class="bi bi-play-circle-fill"></i>
+                            Notre Mission
+                        </a>
+                    </div>
+                    
+                    <!-- Stats Panel -->
+                    <div class="stats-panel glass-panel animate-scale-in delay-3">
+                        <div class="row g-0">
+                            <div class="col-6 col-md-3 stat-item border-end">
+                                <div class="stat-number gradient-text">40</div>
+                                <div class="stat-label">Outils IA</div>
+                            </div>
+                            <div class="col-6 col-md-3 stat-item border-end">
+                                <div class="stat-number gradient-text">500+</div>
+                                <div class="stat-label">Artistes</div>
+                            </div>
+                            <div class="col-6 col-md-3 stat-item border-end">
+                                <div class="stat-number gradient-text">4</div>
+                                <div class="stat-label">Secteurs</div>
+                            </div>
+                            <div class="col-6 col-md-3 stat-item">
+                                <div class="stat-number gradient-text">24/7</div>
+                                <div class="stat-label">Support IA</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         
         <!-- HUD Decorative Elements -->
-        <div class="hud-circle hud-circle-1"></div>
-        <div class="hud-circle hud-circle-2"></div>
-        <div class="hud-line hud-line-1"></div>
-        <div class="hud-line hud-line-2"></div>
+        <div class="hud-element hud-ring-1"></div>
+        <div class="hud-element hud-ring-2"></div>
+        <div class="hud-element hud-corner tl"></div>
+        <div class="hud-element hud-corner tr"></div>
+        <div class="hud-element hud-corner bl"></div>
+        <div class="hud-element hud-corner br"></div>
     </section>
 
     <!-- Vision Section -->
